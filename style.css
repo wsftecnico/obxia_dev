@@ -306,6 +306,25 @@ h2 {
   text-align: center;
 }
 
+.inscricao .card {
+  position: relative;
+}
+
+.inscricao .inscricao-ilustracao {
+  position: absolute;
+  top: -60px;
+  right: -8px;
+  width: min(240px, 24vw);
+  margin: 0;
+  pointer-events: none;
+}
+
+.inscricao .inscricao-ilustracao img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .inscricao .cta-button {
   display: inline-block;
   padding: 16px 36px;
@@ -319,12 +338,15 @@ h2 {
 }
 
 .footer {
-  padding: 40px 10%;
+  padding: clamp(28px, 5vw, 44px) clamp(20px, 8vw, 10%);
   display: flex;
+  gap: clamp(20px, 4vw, 40px);
   justify-content: space-between;
   flex-wrap: wrap;
   color: #fff;
-  background: var(--wood-dark);
+  background:
+    linear-gradient(rgba(34, 21, 14, 0.82), rgba(34, 21, 14, 0.82)),
+    url("img/madeira.png") center / cover no-repeat;
 }
 
 .footer h3 {
@@ -414,11 +436,29 @@ h2 {
   }
 
   .footer {
+    padding: 32px 20px;
     text-align: center;
   }
 
   .footer-left,
   .footer-right {
     margin-bottom: 30px;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .sponsors {
+    justify-content: center;
+  }
+
+  .inscricao .inscricao-ilustracao {
+    position: static;
+    width: min(220px, 70vw);
+    margin: 20px auto 0;
   }
 }

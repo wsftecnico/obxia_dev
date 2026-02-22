@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Feed Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 15px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .insta-feed {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .insta-item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+      transition: .2s;
+    }
+
+    .insta-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .insta-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .insta-caption {
+      padding: 10px;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>📸 Feed Instagram (Demo Pública)</h2>
+    <div class="insta-feed" id="feed"></div>
+  </div>
+
+  <script>
+    // DEMO com imagens públicas
+    const demoPosts = [
+      { img: "https://picsum.photos/500?1", text: "Evento ao vivo 🎶" },
+      { img: "https://picsum.photos/500?2", text: "Bastidores do show" },
+      { img: "https://picsum.photos/500?3", text: "Galera reunida 🙌" },
+      { img: "https://picsum.photos/500?4", text: "Som rolando 🎸" },
+      { img: "https://picsum.photos/500?5", text: "Equipe trabalhando" },
+      { img: "https://picsum.photos/500?6", text: "Palco pronto 🔥" }
+    ];
+
+    const feed = document.getElementById("feed");
+
+    demoPosts.forEach(post => {
+      const div = document.createElement("div");
+      div.className = "insta-item";
+      div.innerHTML = `
+    <img src="${post.img}">
+    <div class="insta-caption">${post.text}</div>
+  `;
+      feed.appendChild(div);
+    });
+  </script>
+
+</body>
+
+</html>

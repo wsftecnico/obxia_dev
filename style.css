@@ -458,7 +458,14 @@ h2 {
 
   .inscricao .inscricao-ilustracao {
     position: static;
+    order: -1;
     width: min(220px, 70vw);
-    margin: 20px auto 0;
+    margin: 0 auto 20px;
+  }
+
+  .inscricao .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

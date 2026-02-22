@@ -182,6 +182,22 @@ h2 {
   max-height: 420px;
 }
 
+.fundamental-figure.foto-nene {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: min(100%, 230px);
+  align-self: flex-start;
+}
+
+.fundamental-figure.foto-nene img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
 #programacao {
   background: var(--orange);
 }
@@ -406,6 +422,7 @@ h2 {
   .hero-left,
   .hero-content,
   .hero-right,
+  .fundamental-figure.foto-nene,
   .programacao-local-row > section,
   .footer-left,
   .footer-right {
@@ -474,5 +491,13 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .fundamental-figure.foto-nene {
+    justify-content: center;
+  }
+
+  .fundamental-figure.foto-nene img {
+    margin-inline: auto;
   }
 }

@@ -22,7 +22,7 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -69,7 +69,7 @@ section > * {
 .hero-divisor {
   flex: 1;
   max-width: 1300px;
-  padding: 40px 20px;
+  padding: 24px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,6 +105,7 @@ section > * {
 }
 
 h2 {
+  font-family: "Rye", cursive;
   margin-top: 0;
   color: var(--gold);
   letter-spacing: 1px;
@@ -375,7 +376,9 @@ h2 {
   margin-right: 15px;
   color: #fff;
   font-size: 20px;
-  transition: transform 0.3s, color 0.3s;
+  transition:
+    transform 0.3s,
+    color 0.3s;
 }
 
 .social-icons a:hover {
@@ -384,6 +387,10 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  .navbar {
+    justify-content: flex-end;
+  }
+
   .hero-divisor,
   .fundamental-layout,
   #programacao .programacao-content,

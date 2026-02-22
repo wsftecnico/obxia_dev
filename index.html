@@ -5,62 +5,65 @@
   <meta charset="UTF-8" />
   <title>Festival de Violeiros de Vermelho Novo</title>
 
-  <meta name="description"
-    content="Festival de Violeiros de Vermelho Novo – celebração da viola caipira e da música raiz." />
+  <meta name="description" content="2º Festival de Violeiros de Vermelho Novo" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <script src="menu.js" defer></script>
-  <script src="slider.js" defer></script>
 </head>
 
 <body>
   <header class="hero" id="topo">
     <!-- NAVBAR -->
     <nav class="navbar">
-      <button class="menu-toggle">☰</button>
-      <ul class="menu">
-        <li><a href="#sobre">O festival</a></li>
-        <li><a href="#programacao">O que vai ter</a></li>
-        <li><a href="#galeria">Fotos e Vídeos</a></li>
-        <li><a href="#depoimentos">Comentários</a></li>
-        <li><a href="#local">Como chegar</a></li>
-        <li><a href="#inscricao">Regulamento e Inscrições</a></li>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="menu-principal">☰</button>
+      <ul class="menu" id="menu-principal">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#local">Local</a></li>
+        <li><a href="#programacao">Programação</a></li>
+        <li><a href="#inscricao">Inscrições</a></li>
       </ul>
     </nav>
 
     <!-- HERO -->
     <div class="hero-divisor">
       <div class="hero-left">
-        <div class="">
-          <div class="">
-            <div class="logo"><img src="img/logo.png" alt="" /></div>
-          </div>
+        <div class="logo hero-main-logo"><img src="img/logo.png" alt="Logo do Festival de Violeiros de Vermelho Novo" />
         </div>
       </div>
-
       <div class="hero-content">
-        <h1>Festival de Violeiros de Vermelho Novo</h1>
-        <p>Aqui a viola não é apenas um instrumento, é a alma da cidade</p>
-
-        <!-- <span>Realização da Prefeitura Municipal de Vermelho Novo</span>
-        -->
+        <div class="festival-intro">
+          <p>
+            Em Vermelho Novo, a viola não é apenas um instrumento, é a alma da
+            cidade. Conhecida como um verdadeiro celeiro de artistas, a
+            realização de um Festival de Violeiros é essencial para manter
+            viva essa identidade única e valorizar o talento que brota em cada
+            esquina.
+          </p>
+          <p>
+            O Festival de Violeiros de Vermelho Novo é uma realização da
+            Prefeitura Municipal de Vermelho Novo,
+            em parceria com a Associação dos Violeiros.
+          </p>
+        </div>
       </div>
 
       <div class="hero-right">
         <div class="carousel">
           <div class="carousel-track">
-            <div class="logo"><img src="img/pa/local.png" alt="" /></div>
-            <div class="logo"><img src="img/pa/ouro.png" alt="" /></div>
-            <div class="logo"><img src="img/pa/sicoob.png" alt="" /></div>
-            <div class="logo"><img src="img/pa/vn.png" alt="" /></div>
+            <div class="logo"><img src="img/pa/local.png" alt="Apoiador local" /></div>
+            <div class="logo"><img src="img/pa/ouro.png" alt="Patrocinador Ouro Minas" /></div>
+            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob União" /></div>
+            <div class="logo"><img src="img/pa/vn.png" alt="Vermelho Novo" /></div>
 
-            <div class="logo"><img src="img/pa/local.png" alt="" /></div>
-            <div class="logo"><img src="img/pa/ouro.png" alt="" /></div>
-            <div class="logo"><img src="img/pa/sicoob.png" alt="" /></div>
-            <div class="logo"><img src="img/pa/vn.png" alt="" /></div>
+            <div class="logo"><img src="img/pa/local.png" alt="Apoiador local" /></div>
+            <div class="logo"><img src="img/pa/ouro.png" alt="Patrocinador Ouro Minas" /></div>
+            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob União" /></div>
+            <div class="logo"><img src="img/pa/vn.png" alt="Vermelho Novo" /></div>
           </div>
         </div>
       </div>
@@ -70,16 +73,6 @@
   <main>
     <section id="sobre">
       <div class="card">
-        <div class="festival-intro">
-          <p>
-            Em Vermelho Novo, a viola não é apenas um instrumento, é a alma da
-            cidade. Conhecida como um verdadeiro celeiro de artistas, a
-            realização de um Festival de Violeiros é essencial para manter
-            viva essa identidade única e valorizar o talento que brota em cada
-            esquina.
-          </p>
-        </div>
-
         <div class="legado">
           <h2>O Legado de Neném Satôca</h2>
           <p>
@@ -92,102 +85,103 @@
           </p>
         </div>
 
-        <div class="importancia">
-          <h2>Por que o Festival é fundamental?</h2>
-          <ul>
-            <li>
-              <strong>Valoriza o artista local e de outras cidades e
-                estados:</strong>
-              Dá visibilidade aos talentos da terra.
-            </li>
-            <li>
-              <strong>Preserva a cultura:</strong> Garante que o "ponteado" da
-              viola passe de pai para filho.
-            </li>
-            <li>
-              <strong>Une a comunidade:</strong> Celebra a história e a
-              identidade do povo vermelhense.
-            </li>
-            <li>
-              <strong>Turismo e economia:</strong> O som da viola atrai
-              visitantes, movimenta o comércio local e coloca Vermelho Novo na
-              rota cultural de Minas Gerais.
-            </li>
-          </ul>
-        </div>
+        <div class="fundamental-layout">
+          <div class="fundamental-text">
+            <div class="importancia">
+              <h2>Por que o Festival é fundamental?</h2>
+              <ul>
+                <li>
+                  <strong>Valoriza o artista local e de outras cidades e
+                    estados:</strong>
+                  Dá visibilidade aos talentos da terra.
+                </li>
+                <li>
+                  <strong>Preserva a cultura:</strong> Garante que o "ponteado" da
+                  viola passe de pai para filho.
+                </li>
+                <li>
+                  <strong>Une a comunidade:</strong> Celebra a história e a
+                  identidade do povo vermelhense.
+                </li>
+                <li>
+                  <strong>Turismo e economia:</strong> O som da viola atrai
+                  visitantes, movimenta o comércio local e coloca Vermelho Novo na
+                  rota cultural de Minas Gerais.
+                </li>
+              </ul>
+            </div>
 
-        <div class="conclusao">
-          <p>
-            Realizar esse evento é honrar o passado de Neném Satôca e garantir
-            o futuro da música de raiz em nossa região.
-          </p>
-        </div>
-      </div>
-    </section>
+            <div class="conclusao">
+              <p>
+                Realizar esse evento é honrar o passado de Neném Satôca e garantir
+                o futuro da música de raiz em nossa região.
+              </p>
+            </div>
+          </div>
 
-    <section id="programacao">
-      <h2>O que vai ter</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>... na quarta-feira da Vermelhense</h3>
-          <ul>
-            <li>Abertura oficial as 20:00 horas</li>
-            <li>Apresentação dos violeiros</li>
-            <li>Palco livre</li>
-            <li>Premiação</li>
-            <li>Apresentação das três duplas vencedoras</li>
-          </ul>
+          <figure class="fundamental-figure">
+            <img src="img/chapeu.png" alt="Registro do Festival de Violeiros" />
+          </figure>
         </div>
       </div>
     </section>
 
     <section id="galeria">
-      <h2>Fotos e Vídeos</h2>
+      <h2>Galeria de Fotos</h2>
       <div class="slider">
-        <button class="slider-btn prev">‹</button>
         <div class="slider-track">
-          <img src="img/galeria1.jpg" alt="" />
-          <img src="img/galeria2.jpg" alt="" />
-          <img src="img/galeria3.jpg" alt="" />
-          <img src="img/galeria4.jpg" alt="" />
+          <img src="img/foto1.jpg" alt="Registro do Festival de Violeiros" />
         </div>
-        <button class="slider-btn next">›</button>
       </div>
     </section>
 
-    <section id="depoimentos">
-      <h2>Comentários</h2>
-      <div class="grid grid-2">
-        <blockquote>
-          “Uma experiência emocionante que valoriza nossa cultura.”
-          <strong>— João</strong>
-        </blockquote>
-        <blockquote>
-          “Aprendi muito e vivi momentos inesquecíveis.”
-          <strong>— Maria</strong>
-        </blockquote>
-      </div>
-    </section>
+    <div class="programacao-local-row">
+      <section id="programacao">
+        <h2>Programação</h2>
+        <div class="card programacao-content">
+          <div class="programacao-texto">
+            <h3>Na quarta-feira da Vermelhense</h3>
+            <ul>
+              <li>Abertura oficial as 20:00 horas</li>
+              <li>Apresentação dos violeiros</li>
+              <li>Palco livre</li>
+              <li>Premiação</li>
+              <li>Apresentação das três duplas vencedoras</li>
+            </ul>
+          </div>
+          <figure class="programacao-figura">
+            <img src="img/viola.png" alt="Viola caipira" />
+          </figure>
+        </div>
+      </section>
 
-    <section id="local" class="mapa">
-      <div class="card">
-        <h2>Como chegar</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d420.7811701239996!2d-42.26665558475527!3d-20.035590655210488"
-          loading="lazy"></iframe>
-      </div>
-    </section>
+      <section id="local" class="mapa">
+        <div class="card">
+          <h2>Localização</h2>
+          <p>Área da Festa Vermelhense -
+            Praça Professor Silveira <br />
+            Centro de Vermelho Novo - MG <br />
+            <strong><a href="https://maps.app.goo.gl/xUytamGW4LwcrtuW8">Como chegar</a></strong>
+          </p>
+
+          <iframe src="https://www.google.com/maps/d/embed?mid=1ClarpL86Fwc0zi-B2ZH4l8d_dmEwdMw&ehbc=2E312F">
+
+          </iframe>
+        </div>
+      </section>
+    </div>
 
     <section id="inscricao" class="inscricao">
       <div class="card">
         <h2>Inscrições</h2>
         <p>
-          Leia o <a href="https://drive.google.com/file/d/1_02sG8Td1gdCoOHWQ-tRHlEaBXXH5ESs/view?usp=sharing">regulamento aqui</a> e faça sua
+          Leia o <a
+            href="https://drive.google.com/file/d/1_02sG8Td1gdCoOHWQ-tRHlEaBXXH5ESs/view?usp=sharing">regulamento
+            aqui</a> e faça sua
           inscrição:
         </p>
-        <a href="https://forms.gle/6cRyqEUjn4FBJagm8" target="_blank">
-          <button>Inscreva-se agora</button>
-        </a>
+        <a href="https://forms.gle/6cRyqEUjn4FBJagm8" target="_blank" rel="noopener noreferrer"
+          class="cta-button">Inscreva-se agora</a>
       </div>
     </section>
   </main>
@@ -197,7 +191,7 @@
       <h3>Realização</h3>
       <div class="sponsors">
         <div class="sponsor-item">Prefeitura Municipal de Vermelho Novo</div>
-        <div class="sponsor-item">Associação</div>
+        <div class="sponsor-item">Associação de Violeiros de Vermelho Novo</div>
       </div>
       <h3>Patrocinadores</h3>
       <div class="sponsors">

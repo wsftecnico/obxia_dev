@@ -13,8 +13,6 @@
 
   /* NEUTROS */
   --cream: #efe7dd;
-  --text-dark: #2a1a14;
-
   /* EXTRA RURAL */
   --green-rural: #5e6f3a;
 
@@ -41,7 +39,7 @@ body {
   min-height: 100vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("hero.png") center/cover no-repeat;
+    url("img/foto1.jpg") center/cover no-repeat;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -126,7 +124,7 @@ section > * {
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
   color: var(--gold);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -154,22 +152,83 @@ h2 {
 ================================ */
 #sobre {
   background: var(--wood);
+  min-height: auto;
+}
+
+.fundamental-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.fundamental-text,
+.fundamental-figure {
+  flex: 1 1 0;
+}
+
+.fundamental-figure {
+  margin: 0;
+}
+
+.fundamental-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow);
 }
 
 #programacao {
   background: var(--orange);
 }
 
-#galeria {
-  background: var(--wood-light);
+#programacao .programacao-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-#depoimentos {
-  background: var(--wood-dark);
+#programacao .programacao-texto,
+#programacao .programacao-figura {
+  flex: 1 1 0;
+}
+
+#programacao .programacao-figura {
+  margin: 0;
+}
+
+#programacao .programacao-figura img {
+  width: 100%;
+  max-height: 360px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+#galeria {
+  background: var(--wood-light);
+  min-height: auto;
 }
 
 #local {
   background: var(--green-rural);
+}
+
+.programacao-local-row {
+  background: linear-gradient(
+    90deg,
+    var(--orange) 0%,
+    var(--orange) 36%,
+    #8f5f2f 50%,
+    var(--green-rural) 64%,
+    var(--green-rural) 100%
+  );
+}
+
+.programacao-local-row #programacao,
+.programacao-local-row #local {
+  background: transparent;
 }
 
 #inscricao {
@@ -177,10 +236,22 @@ h2 {
   color: var(--wood-dark);
 }
 
+.programacao-local-row {
+  display: flex;
+}
+
+.programacao-local-row > section {
+  flex: 1 1 0;
+  width: auto;
+  min-height: auto;
+}
+
 /* ===============================
    SLIDER GALERIA
 ================================ */
 .slider {
+  width: min(100%, 760px);
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
@@ -194,28 +265,9 @@ h2 {
 
 .slider-track img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  max-height: 420px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 10px;
-}
-.next {
-  right: 10px;
 }
 
 /* ===============================
@@ -247,6 +299,15 @@ h2 {
   max-width: 320px;
   object-fit: contain;
   transition: 0.3s;
+}
+
+.hero-main-logo {
+  height: 400px;
+}
+
+.hero-main-logo img {
+  max-height: 340px;
+  max-width: 640px;
 }
 
 .logo img:hover {
@@ -292,7 +353,12 @@ h2 {
   text-align: center;
 }
 
-.inscricao button {
+.inscricao h2 {
+  text-align: center;
+}
+
+.inscricao .cta-button {
+  display: inline-block;
   padding: 16px 36px;
   border-radius: 50px;
   border: none;
@@ -300,6 +366,7 @@ h2 {
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* ===============================
@@ -352,6 +419,30 @@ h2 {
    RESPONSIVO
 ================================ */
 @media (max-width: 900px) {
+  .fundamental-layout {
+    flex-direction: column;
+  }
+
+  #programacao .programacao-content {
+    flex-direction: column;
+  }
+
+  .programacao-local-row {
+    background: linear-gradient(
+      180deg,
+      var(--orange) 0%,
+      var(--orange) 36%,
+      #8f5f2f 50%,
+      var(--green-rural) 64%,
+      var(--green-rural) 100%
+    );
+    flex-direction: column;
+  }
+
+  .programacao-local-row > section {
+    width: 100%;
+  }
+
   .hero-divisor {
     flex-direction: column;
     text-align: center;
@@ -393,7 +484,4 @@ h2 {
     margin-bottom: 30px;
   }
 
-  .slider-btn {
-    display: none;
-  }
 }

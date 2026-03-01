@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <script src="menu.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -41,33 +41,31 @@
         </div>
       </div>
       <div class="hero-content">
-        <div class="festival-intro">
-          <h3>
-            Em Vermelho Novo, a viola não é apenas um instrumento, é a alma da
-            cidade. Conhecida como um verdadeiro celeiro de artistas, a
-            realização de um Festival de Violeiros é essencial para manter
-            viva essa identidade única e valorizar o talento que brota em cada
-            esquina.
-          </h3>
-          <h5>
-            O Festival de Violeiros é uma realização da
-            Prefeitura Municipal de Vermelho Novo.
-          </h5>
-        </div>
+        <h1>
+          Em Vermelho Novo, a viola não é apenas um instrumento, é a alma da
+          cidade. Conhecida como um verdadeiro celeiro de artistas, a
+          realização de um Festival de Violeiros é essencial para manter
+          viva essa identidade única e valorizar o talento que brota em cada
+          esquina.
+        </h1>
+        <h2>
+          O Festival de Violeiros é uma realização da
+          Prefeitura Municipal de Vermelho Novo.
+        </h2>
       </div>
 
       <div class="hero-right">
         <div class="carousel">
           <div class="carousel-track">
-            <div class="logo"><img src="img/pa/local.png" alt="Apoiador local" /></div>
+            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob" /></div>
+            <div class="logo"><img src="img/pa/fibron.png" alt="Patrocinador Fibron" /></div>
             <div class="logo"><img src="img/pa/ouro.png" alt="Patrocinador Ouro Minas" /></div>
-            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob União" /></div>
-            <div class="logo"><img src="img/pa/vn.png" alt="Vermelho Novo" /></div>
+            <div class="logo"><img src="img/pa/vn.png" alt="Prefeitura Vermelho Novo" /></div>
 
-            <div class="logo"><img src="img/pa/local.png" alt="Apoiador local" /></div>
+            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob" /></div>
+            <div class="logo"><img src="img/pa/fibron.png" alt="Patrocinador Fibron" /></div>
             <div class="logo"><img src="img/pa/ouro.png" alt="Patrocinador Ouro Minas" /></div>
-            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob União" /></div>
-            <div class="logo"><img src="img/pa/vn.png" alt="Vermelho Novo" /></div>
+            <div class="logo"><img src="img/pa/vn.png" alt="Prefeitura Vermelho Novo" /></div>
           </div>
         </div>
       </div>
@@ -78,8 +76,8 @@
     <section id="sobre">
       <div class="card">
         <div class="legado">
-          <h2>O Legado de Neném Satôca</h2>
-          <h3>
+          <h3>O Legado de Neném Satôca</h3>
+          <p>
             Tudo começou com o toque pioneiro de Neném Satôca.
             Ele foi a semente que germinou e deu bons frutos,
             nós, violeiros e violeiras que gostamos e cultuamos
@@ -89,12 +87,12 @@
             O festival é, antes de tudo, uma homenagem a esse mestre
             e um palco para que seus sucessores mostrem que a tradição
             está mais forte do que nunca.
-          </h3>
+          </p>
         </div>
         <div class="fundamental-layout">
           <div class="fundamental-text">
             <div class="importancia">
-              <h2>Por que o Festival é fundamental?</h2>
+              <h3>Por que o Festival é fundamental?</h3>
               <ul>
                 <li>
                   <strong>Valoriza o artista local e de outras cidades e estados:</strong>
@@ -102,7 +100,7 @@
                 </li>
                 <li>
                   <strong>Preserva a cultura:</strong>
-                  Garante que o ponteado da viola passe em geração em Geração.
+                  Garante que o ponteado da viola passe em geração em geração.
                 </li>
                 <li>
                   <strong>Une a comunidade:</strong>
@@ -116,10 +114,10 @@
               </ul>
             </div>
             <div class="conclusao">
-              <h3>
+              <p>
                 Realizar esse evento é honrar o passado de Neném Satôca <br />
                 e garantir o futuro da música de raiz em nossa região.
-              </h3>
+              </p>
             </div>
           </div>
 
@@ -131,20 +129,26 @@
     </section>
 
     <section id="galeria">
-      <div class="slider">
-        <div class="slider-track">
-          <img src="img/foto1.jpg" alt="Registro do Festival de Violeiros" />
+      <div class="galeria-grid">
+        <div class="galeria-item galeria-item--slider">
+          <div class="galeria-slider" id="galeria-slider" aria-label="Galeria de fotos do festival">
+            <button class="galeria-nav galeria-nav--prev" type="button" aria-label="Foto anterior">&#10094;</button>
+            <img class="galeria-slider-image" src="img/fts/foto1.jpg" alt="Registro do Festival de Violeiros" />
+            <button class="galeria-nav galeria-nav--next" type="button" aria-label="Próxima foto">&#10095;</button>
+            <div class="galeria-dots" aria-hidden="true"></div>
+          </div>
         </div>
+        <div class="galeria-item galeria-item--instagram">instagram</div>
       </div>
     </section>
 
     <div class="programacao-local-row">
       <section id="programacao">
-        <h2>Na quarta-feira - 22 DE JULHO</h2>
-        <div class="card programacao-content">
+        <h3>Na quarta-feira - 22 DE JULHO</h3>
+        <div class="programacao-content">
           <div class="programacao-texto">
             <ul>
-              <li>Abertura oficial as 20:00 horas</li>
+              <li>Abertura oficial às 20:00 horas</li>
               <li>Apresentação dos violeiros</li>
               <li>Palco livre</li>
               <li>Premiação</li>
@@ -158,10 +162,11 @@
       </section>
 
       <section id="local" class="mapa">
-        <div class="card">
-          <h2>Área da Festa Vermelhense</h2>
+        <div>
+          <h3>Área da Festa Vermelhense</h3>
           <p class="mapa-endereco">Praça Professor Silveira - Centro - Vermelho Novo - MG</p>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1ClarpL86Fwc0zi-B2ZH4l8d_dmEwdMw&ehbc=2E312F">
+          <iframe title="Mapa da Área da Festa Vermelhense"
+            src="https://www.google.com/maps/d/embed?mid=1ClarpL86Fwc0zi-B2ZH4l8d_dmEwdMw&ehbc=2E312F">
           </iframe>
           <div class="mapa-acao">
             <a href="https://maps.app.goo.gl/xUytamGW4LwcrtuW8" target="_blank" rel="noopener noreferrer"
@@ -176,12 +181,11 @@
 
     <section id="inscricao" class="inscricao">
       <div class="card">
-        <h2>Inscrições</h2>
+        <h3>Inscrições</h3>
         <p>
           Leia o <a
             href="https://drive.google.com/file/d/1_02sG8Td1gdCoOHWQ-tRHlEaBXXH5ESs/view?usp=sharing">regulamento
-            aqui</a> e faça sua
-          inscrição:
+            aqui</a> e faça sua inscrição:
         </p>
         <a href="https://forms.gle/6cRyqEUjn4FBJagm8" target="_blank" rel="noopener noreferrer"
           class="cta-button">Inscreva-se agora</a>
@@ -194,17 +198,17 @@
 
   <footer class="footer">
     <div class="footer-left">
-      <h3>Realização</h3>
+      <h4>Realização</h4>
       <div class="sponsors">
         <div class="sponsor-item">Prefeitura Municipal de Vermelho Novo</div>
       </div>
-      <h3>Patrocinadores</h3>
+      <h4>Patrocinadores</h4>
       <div class="sponsors">
         <div class="sponsor-item">Sicoob União</div>
-        <div class="sponsor-item">Empresa Um</div>
-        <div class="sponsor-item">Empresa Dois</div>
+        <div class="sponsor-item">Fibron</div>
+        <div class="sponsor-item">Ouro Minas</div>
       </div>
-      <h3>Apoiadores</h3>
+      <h4>Apoiadores</h4>
       <div class="sponsors">
         <div class="sponsor-item">Comércio VN</div>
         <div class="sponsor-item">Comércio DC</div>
@@ -214,18 +218,26 @@
     </div>
 
     <div class="footer-right">
-      <h3>Contato</h3>
+      <h4>Contato</h4>
       <div class="contact-info">
-        <p>Email: wsftecnico@gmail.com</p>
         <p>WhatsApp: (33) 99949-2804</p>
+        <p>Email: fvvnovo@gmail.com</p>
       </div>
       <div class="social-icons">
-        <a href="mailto:wsftecnico@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://wa.me/5533999492804"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://instagram.com/festival_violeiros_vn"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:fvvnovo@gmail.com" aria-label="Enviar e-mail para o festival"><i class="fa-solid fa-envelope"
+            aria-hidden="true"></i></a>
+        <a href="https://wa.me/5533999492804" aria-label="Conversar no WhatsApp"><i class="fa-brands fa-whatsapp"
+            aria-hidden="true"></i></a>
+        <a href="https://instagram.com/festival_violeiros_vn" aria-label="Abrir Instagram do festival"><i
+            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/@festival_violeiros_vn" aria-label="Abrir YouTube do festival"><i
+            class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/festival_violeiros_vn" aria-label="Abrir Facebook do festival"><i
+            class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://x.com/festival_violeiros_vn" aria-label="Abrir X do festival"><i class="fa-brands fa-x-twitter"
+            aria-hidden="true"></i></a>
       </div>
+
     </div>
   </footer>
 </body>

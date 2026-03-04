@@ -215,34 +215,54 @@ h3 {
   border-radius: 12px;
   background:
     repeating-linear-gradient(
-      90deg,
-      rgba(235, 212, 65, 0.65) 0 14px,
-      transparent 14px 26px
-    ) top / calc(100% - 16px) 2px no-repeat,
+        90deg,
+        rgba(235, 212, 65, 0.65) 0 14px,
+        transparent 14px 26px
+      )
+      top / calc(100% - 16px) 2px no-repeat,
     repeating-linear-gradient(
-      90deg,
-      rgba(235, 212, 65, 0.65) 0 14px,
-      transparent 14px 26px
-    ) bottom / calc(100% - 16px) 2px no-repeat,
+        90deg,
+        rgba(235, 212, 65, 0.65) 0 14px,
+        transparent 14px 26px
+      )
+      bottom / calc(100% - 16px) 2px no-repeat,
     repeating-linear-gradient(
-      180deg,
-      rgba(235, 212, 65, 0.65) 0 14px,
-      transparent 14px 26px
-    ) left / 2px calc(100% - 16px) no-repeat,
+        180deg,
+        rgba(235, 212, 65, 0.65) 0 14px,
+        transparent 14px 26px
+      )
+      left / 2px calc(100% - 16px) no-repeat,
     repeating-linear-gradient(
-      180deg,
-      rgba(235, 212, 65, 0.65) 0 14px,
-      transparent 14px 26px
-    ) right / 2px calc(100% - 16px) no-repeat;
+        180deg,
+        rgba(235, 212, 65, 0.65) 0 14px,
+        transparent 14px 26px
+      )
+      right / 2px calc(100% - 16px) no-repeat;
 }
 
 #galeria {
   color: var(--wood-dark);
   background:
-    radial-gradient(circle at 12% 18%, rgba(255, 243, 173, 0.3), transparent 28%),
-    radial-gradient(circle at 86% 22%, rgba(255, 199, 92, 0.26), transparent 30%),
-    radial-gradient(circle at 22% 82%, rgba(255, 214, 126, 0.24), transparent 34%),
-    radial-gradient(circle at 78% 74%, rgba(245, 176, 94, 0.22), transparent 32%),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(255, 243, 173, 0.3),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 86% 22%,
+      rgba(255, 199, 92, 0.26),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 22% 82%,
+      rgba(255, 214, 126, 0.24),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 78% 74%,
+      rgba(245, 176, 94, 0.22),
+      transparent 32%
+    ),
     repeating-conic-gradient(
       from 14deg at 18% 24%,
       rgba(121, 76, 38, 0.2) 0deg 10deg,
@@ -264,7 +284,9 @@ h3 {
       rgba(166, 110, 58, 0.28) 5px 11px
     ),
     linear-gradient(145deg, #f6e6be 0%, #dfbc7f 50%, #b88345 100%);
-  background-blend-mode: screen, screen, overlay, overlay, soft-light, soft-light, multiply, multiply, normal;
+  background-blend-mode:
+    screen, screen, overlay, overlay, soft-light, soft-light, multiply,
+    multiply, normal;
 }
 
 #local {
@@ -272,7 +294,11 @@ h3 {
   isolation: isolate;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 24%, rgba(235, 212, 65, 0.18), transparent 36%),
+    radial-gradient(
+      circle at 78% 24%,
+      rgba(235, 212, 65, 0.18),
+      transparent 36%
+    ),
     repeating-linear-gradient(
       0deg,
       rgba(239, 231, 221, 0.08) 0 1px,
@@ -292,9 +318,21 @@ h3 {
   overflow: hidden;
   color: var(--cream);
   background:
-    radial-gradient(circle at 58% 38%, rgba(255, 231, 174, 0.36), transparent 34%),
-    radial-gradient(circle at 88% 44%, rgba(255, 216, 144, 0.34), transparent 36%),
-    radial-gradient(circle at 78% 10%, rgba(255, 196, 110, 0.3), transparent 26%),
+    radial-gradient(
+      circle at 58% 38%,
+      rgba(255, 231, 174, 0.36),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 44%,
+      rgba(255, 216, 144, 0.34),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 78% 10%,
+      rgba(255, 196, 110, 0.3),
+      transparent 26%
+    ),
     linear-gradient(180deg, #1a2440 0%, #2f3552 42%, #5d4a3d 72%, #8b5f3a 100%);
 }
 
@@ -322,8 +360,12 @@ h3 {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cg fill='%23f4d889' fill-opacity='0.32' font-family='serif'%3E%3Ctext x='20' y='60' font-size='34'%3E%E2%99%AA%3C/text%3E%3Ctext x='112' y='108' font-size='40'%3E%E2%99%AB%3C/text%3E%3Ctext x='36' y='172' font-size='28'%3E%E2%99%AC%3C/text%3E%3Ctext x='156' y='188' font-size='24'%3E%E2%99%A9%3C/text%3E%3C/g%3E%3C/svg%3E"),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Cg fill='%23ffe7a8' fill-opacity='0.26' font-family='serif'%3E%3Ctext x='40' y='86' font-size='30'%3E%E2%99%AC%3C/text%3E%3Ctext x='156' y='64' font-size='26'%3E%E2%99%AA%3C/text%3E%3Ctext x='92' y='170' font-size='38'%3E%E2%99%AB%3C/text%3E%3Ctext x='198' y='218' font-size='24'%3E%E2%99%A9%3C/text%3E%3C/g%3E%3C/svg%3E");
-  background-size: 250px 250px, 320px 320px;
-  background-position: 0 -42px, 120px 20px;
+  background-size:
+    250px 250px,
+    320px 320px;
+  background-position:
+    0 -42px,
+    120px 20px;
   background-repeat: repeat;
   opacity: 0.62;
 }
@@ -402,7 +444,11 @@ h3 {
   isolation: isolate;
   overflow: hidden;
   background:
-    radial-gradient(circle at 18% 18%, rgba(255, 232, 171, 0.2), transparent 34%),
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(255, 232, 171, 0.2),
+      transparent 34%
+    ),
     repeating-linear-gradient(
       -28deg,
       rgba(255, 255, 255, 0.08) 0 2px,
@@ -431,15 +477,31 @@ h3 {
 
 #programacao::before {
   background:
-    radial-gradient(circle at 14% 22%, rgba(255, 214, 120, 0.28) 0 18%, transparent 19% 100%),
-    radial-gradient(circle at 84% 76%, rgba(255, 214, 120, 0.16) 0 16%, transparent 17% 100%);
+    radial-gradient(
+      circle at 14% 22%,
+      rgba(255, 214, 120, 0.28) 0 18%,
+      transparent 19% 100%
+    ),
+    radial-gradient(
+      circle at 84% 76%,
+      rgba(255, 214, 120, 0.16) 0 16%,
+      transparent 17% 100%
+    );
   opacity: 0.7;
 }
 
 #local::before {
   background:
-    radial-gradient(circle at 82% 78%, rgba(255, 255, 255, 0.16) 0 12%, transparent 13% 100%),
-    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.14) 0 14%, transparent 15% 100%);
+    radial-gradient(
+      circle at 82% 78%,
+      rgba(255, 255, 255, 0.16) 0 12%,
+      transparent 13% 100%
+    ),
+    radial-gradient(
+      circle at 18% 20%,
+      rgba(255, 255, 255, 0.14) 0 14%,
+      transparent 15% 100%
+    );
   opacity: 0.75;
 }
 
@@ -477,94 +539,52 @@ h3 {
 }
 
 .galeria-item--instagram {
-  padding: 18px;
+  padding: 0;
   align-items: stretch;
+  background: transparent;
 }
 
-.instagram-feed {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.instagram-feed__header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: none;
-}
-
-.instagram-feed__header i {
-  font-size: 1.2rem;
-}
-
-.instagram-feed__status {
-  margin: 0;
-  min-height: 20px;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: none;
-}
-
-.instagram-feed__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.instagram-feed__item {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.instagram-feed__item img {
+.instagram-card {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.25s ease;
+  min-height: 220px;
+  border-radius: 16px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  background: linear-gradient(160deg, #28192d 0%, #4f2343 48%, #8f3a4a 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.instagram-feed__item:hover img {
-  transform: scale(1.05);
-}
-
-.instagram-feed__badge {
-  position: absolute;
-  right: 6px;
-  bottom: 6px;
-  padding: 4px 6px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.62);
+.instagram-card i {
+  font-size: 1.9rem;
   color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
 }
 
-.instagram-feed__cta {
+.instagram-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-transform: none;
+}
+
+.instagram-card a {
   align-self: flex-start;
-  margin-top: 4px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: #fff;
-  color: #4f2717;
-  font-size: 0.85rem;
+  background: linear-gradient(145deg, #f77737 0%, #e1306c 55%, #833ab4 100%);
+  color: #fff;
+  font-size: 0.83rem;
   font-weight: 700;
   text-decoration: none;
   text-transform: none;
 }
 
-.instagram-feed__cta:hover {
+.instagram-card a:hover {
   opacity: 0.92;
 }
 
@@ -964,7 +984,4 @@ h3 {
     margin-inline: auto;
   }
 
-  .instagram-feed__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }

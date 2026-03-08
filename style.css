@@ -17,6 +17,20 @@ body {
   font-family: system-ui, sans-serif;
   background: linear-gradient(var(--wood-dark), var(--wood));
   color: var(--cream);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(235, 212, 65, 0.95);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -27,7 +41,7 @@ body {
   color: #fff;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("img/foto1.jpg") center / cover no-repeat;
+    url("/img/capa.png") center / cover no-repeat;
 }
 
 .navbar,
@@ -60,6 +74,11 @@ section > * {
 .menu a {
   color: #fff;
   text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .menu-toggle {
@@ -603,7 +622,6 @@ h3 {
   height: 100%;
   min-height: 220px;
   object-fit: cover;
-  display: block;
 }
 
 .galeria-nav {
@@ -699,6 +717,17 @@ h3 {
   transform: scale(1.05);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @keyframes slideVertical {
   0%,
   20% {
@@ -777,11 +806,21 @@ h3 {
 
 .inscricao .inscricao-ilustracao {
   position: absolute;
-  top: -60px;
-  right: -8px;
+  top: -64px;
   width: min(240px, 24vw);
   margin: 0;
   pointer-events: none;
+}
+
+.inscricao .inscricao-ilustracao--left {
+  left: 0;
+  width: min(288px, 28.8vw);
+  transform: translateX(-14%);
+}
+
+.inscricao .inscricao-ilustracao--right {
+  right: 0;
+  transform: translateX(8%);
 }
 
 .inscricao .inscricao-ilustracao img {
@@ -811,7 +850,7 @@ h3 {
   color: #fff;
   background:
     linear-gradient(rgba(34, 21, 14, 0.82), rgba(34, 21, 14, 0.82)),
-    url("img/madeira.png") center / cover no-repeat;
+    url("/img/madeira.png") center / cover no-repeat;
 }
 
 .footer h4 {
@@ -969,9 +1008,18 @@ h3 {
 
   .inscricao .inscricao-ilustracao {
     position: static;
-    order: -1;
     width: min(220px, 70vw);
     margin: 0 auto 20px;
+    transform: none;
+  }
+
+  .inscricao .inscricao-ilustracao--right {
+    order: -1;
+  }
+
+  .inscricao .inscricao-ilustracao--left {
+    order: 2;
+    margin: 20px auto 0;
   }
 
   .inscricao .card {

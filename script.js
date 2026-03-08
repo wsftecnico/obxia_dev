@@ -2,11 +2,45 @@ const toggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
 if (toggle && menu) {
+  const setMenuState = (open) => {
+    menu.classList.toggle("active", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = open ? "X" : "☰";
+    toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  };
+
   toggle.addEventListener("click", () => {
-    const isOpen = menu.classList.toggle("active");
-    toggle.setAttribute("aria-expanded", String(isOpen));
-    toggle.textContent = isOpen ? "X" : "☰";
-    toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    const isOpen = !menu.classList.contains("active");
+    setMenuState(isOpen);
+  });
+
+  menu.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) {
+      return;
+    }
+    if (target.closest("a")) {
+      setMenuState(false);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Node)) {
+      return;
+    }
+    const clickInsideMenu = menu.contains(target);
+    const clickOnToggle = toggle.contains(target);
+    if (!clickInsideMenu && !clickOnToggle) {
+      setMenuState(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMenuState(false);
+      toggle.focus();
+    }
   });
 }
 
@@ -16,7 +50,7 @@ if (galeriaSlider) {
   initGaleriaSlider(galeriaSlider);
 }
 
-async function initGaleriaSlider(sliderRoot) {
+function initGaleriaSlider(sliderRoot) {
   const imageEl = sliderRoot.querySelector(".galeria-slider-image");
   const prevBtn = sliderRoot.querySelector(".galeria-nav--prev");
   const nextBtn = sliderRoot.querySelector(".galeria-nav--next");
@@ -26,13 +60,16 @@ async function initGaleriaSlider(sliderRoot) {
     return;
   }
 
-  const images = await discoverGaleriaImages();
+  const images = getGaleriaImages(sliderRoot);
   if (!images.length) {
     return;
   }
 
   let index = 0;
   let autoplayId = null;
+
+  imageEl.loading = "eager";
+  imageEl.decoding = "async";
 
   dotsEl.innerHTML = images
     .map(
@@ -47,6 +84,7 @@ async function initGaleriaSlider(sliderRoot) {
     imageEl.src = images[index];
     imageEl.alt = `Registro do Festival de Violeiros ${index + 1}`;
     dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+    preloadNext(index, images);
   };
 
   const goTo = (nextIndex) => {
@@ -59,6 +97,13 @@ async function initGaleriaSlider(sliderRoot) {
       clearInterval(autoplayId);
     }
     autoplayId = setInterval(() => goTo(index + 1), 5000);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayId) {
+      clearInterval(autoplayId);
+      autoplayId = null;
+    }
   };
 
   prevBtn.addEventListener("click", () => {
@@ -88,47 +133,49 @@ async function initGaleriaSlider(sliderRoot) {
     restartAutoplay();
   });
 
+  sliderRoot.addEventListener("mouseenter", stopAutoplay);
+  sliderRoot.addEventListener("mouseleave", restartAutoplay);
+  sliderRoot.addEventListener("focusin", stopAutoplay);
+  sliderRoot.addEventListener("focusout", (event) => {
+    const nextTarget = event.relatedTarget;
+    if (!(nextTarget instanceof Node) || !sliderRoot.contains(nextTarget)) {
+      restartAutoplay();
+    }
+  });
+
+  sliderRoot.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      goTo(index - 1);
+      restartAutoplay();
+    }
+    if (event.key === "ArrowRight") {
+      goTo(index + 1);
+      restartAutoplay();
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      restartAutoplay();
+    }
+  });
+
   render();
   restartAutoplay();
 }
 
-async function discoverGaleriaImages() {
-  const basePath = "img/fts/";
-  const extensions = ["jpg", "jpeg", "png", "webp"];
-  const results = [];
-  let missesAfterFirst = 0;
-
-  for (let i = 1; i <= 200; i += 1) {
-    let found = "";
-
-    for (const extension of extensions) {
-      const path = `${basePath}foto${i}.${extension}`;
-      // eslint-disable-next-line no-await-in-loop
-      if (await imageExists(path)) {
-        found = path;
-        break;
-      }
-    }
-
-    if (found) {
-      results.push(found);
-      missesAfterFirst = 0;
-    } else if (results.length) {
-      missesAfterFirst += 1;
-      if (missesAfterFirst >= 6) {
-        break;
-      }
-    }
-  }
-
-  return results;
+function getGaleriaImages(sliderRoot) {
+  const basePath = "/img/fts/";
+  const totalFromData = Number(sliderRoot.dataset.totalImages);
+  const total = Number.isInteger(totalFromData) && totalFromData > 0 ? totalFromData : 20;
+  return Array.from({ length: total }, (_, i) => `${basePath}foto${i + 1}.jpeg`);
 }
 
-function imageExists(src) {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(true);
-    img.onerror = () => resolve(false);
-    img.src = src;
-  });
+function preloadNext(index, images) {
+  const nextIndex = (index + 1) % images.length;
+  const preloadImage = new Image();
+  preloadImage.decoding = "async";
+  preloadImage.src = images[nextIndex];
 }

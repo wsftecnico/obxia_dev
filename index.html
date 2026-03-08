@@ -5,13 +5,70 @@
   <meta charset="UTF-8" />
   <title>Festival de Violeiros de Vermelho Novo</title>
 
-  <meta name="description" content="2º Festival de Violeiros de Vermelho Novo" />
+  <meta name="description"
+    content="2º Festival de Violeiros de Vermelho Novo: tradição da viola caipira, artistas locais e regionais, premiação e celebração cultural em Vermelho Novo - MG." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <!-- Atualize para a URL final de produção no lançamento -->
+  <link rel="canonical" href="https://www.fvvn.com.br/" />
+  <meta name="theme-color" content="#3e2418" />
+  <meta property="og:title" content="Festival de Violeiros de Vermelho Novo" />
+  <meta property="og:description"
+    content="2º Festival de Violeiros de Vermelho Novo: tradição da viola caipira, artistas locais e regionais, premiação e celebração cultural em Vermelho Novo - MG." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.fvvn.com.br/" />
+  <meta property="og:image" content="/img/logo.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Festival de Violeiros de Vermelho Novo" />
+  <meta name="twitter:description"
+    content="2º Festival de Violeiros de Vermelho Novo: tradição da viola caipira, artistas locais e regionais, premiação e celebração cultural em Vermelho Novo - MG." />
+  <meta name="twitter:image" content="/img/logo.png" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B737WRC0F6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-B737WRC0F6');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "2º Festival de Violeiros de Vermelho Novo",
+      "description": "Tradição da viola caipira, artistas locais e regionais, premiação e celebração cultural em Vermelho Novo - MG.",
+      "image": ["/img/logo.png"],
+      "startDate": "2026-07-22T20:00:00-03:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Área da Festa Vermelhense",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Praça Professor Silveira - Centro",
+          "addressLocality": "Vermelho Novo",
+          "addressRegion": "MG",
+          "addressCountry": "BR"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Prefeitura Municipal de Vermelho Novo"
+      },
+      "url": "https://www.fvvn.com.br/"
+    }
+  </script>
 
   <!-- Fonte Western -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -22,7 +79,7 @@
 <body>
   <header class="hero" id="topo">
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Menu principal">
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
         aria-controls="menu-principal">☰</button>
       <ul class="menu" id="menu-principal">
@@ -37,7 +94,8 @@
     <!-- HERO -->
     <div class="hero-divisor">
       <div class="hero-left">
-        <div class="logo hero-main-logo"><img src="img/logo.png" alt="Logo do Festival de Violeiros de Vermelho Novo" />
+        <div class="logo hero-main-logo"><img src="/img/logo.png" alt="Logo do Festival de Violeiros de Vermelho Novo"
+            fetchpriority="high" />
         </div>
       </div>
       <div class="hero-content">
@@ -57,15 +115,25 @@
       <div class="hero-right">
         <div class="carousel">
           <div class="carousel-track">
-            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob" /></div>
-            <div class="logo"><img src="img/pa/fibron.png" alt="Patrocinador Fibron" /></div>
-            <div class="logo"><img src="img/pa/ouro.png" alt="Patrocinador Ouro Minas" /></div>
-            <div class="logo"><img src="img/pa/vn.png" alt="Prefeitura Vermelho Novo" /></div>
+            <div class="logo"><img src="/img/pa/sicoob.png" alt="Patrocinador Sicoob" loading="lazy" decoding="async" />
+            </div>
+            <div class="logo"><img src="/img/pa/fibron.png" alt="Patrocinador Fibron" loading="lazy" decoding="async" />
+            </div>
+            <div class="logo"><img src="/img/pa/ouro.png" alt="Patrocinador Ouro Minas" loading="lazy"
+                decoding="async" />
+            </div>
+            <div class="logo"><img src="/img/pa/vn.png" alt="Prefeitura Vermelho Novo" loading="lazy" decoding="async" />
+            </div>
 
-            <div class="logo"><img src="img/pa/sicoob.png" alt="Patrocinador Sicoob" /></div>
-            <div class="logo"><img src="img/pa/fibron.png" alt="Patrocinador Fibron" /></div>
-            <div class="logo"><img src="img/pa/ouro.png" alt="Patrocinador Ouro Minas" /></div>
-            <div class="logo"><img src="img/pa/vn.png" alt="Prefeitura Vermelho Novo" /></div>
+            <div class="logo"><img src="/img/pa/sicoob.png" alt="Patrocinador Sicoob" loading="lazy" decoding="async" />
+            </div>
+            <div class="logo"><img src="/img/pa/fibron.png" alt="Patrocinador Fibron" loading="lazy" decoding="async" />
+            </div>
+            <div class="logo"><img src="/img/pa/ouro.png" alt="Patrocinador Ouro Minas" loading="lazy"
+                decoding="async" />
+            </div>
+            <div class="logo"><img src="/img/pa/vn.png" alt="Prefeitura Vermelho Novo" loading="lazy" decoding="async" />
+            </div>
           </div>
         </div>
       </div>
@@ -122,7 +190,7 @@
           </div>
 
           <figure class="fundamental-figure foto-nene">
-            <img src="img/fotoNene.png" alt="Foto de Neném Satôca" />
+            <img src="/img/fotoNene.png" alt="Foto de Neném Satôca" loading="lazy" decoding="async" />
           </figure>
         </div>
       </div>
@@ -131,9 +199,11 @@
     <section id="galeria">
       <div class="galeria-grid">
         <div class="galeria-item galeria-item--slider">
-          <div class="galeria-slider" id="galeria-slider" aria-label="Galeria de fotos do festival">
+          <div class="galeria-slider" id="galeria-slider" aria-label="Galeria de fotos do festival"
+            data-total-images="20">
             <button class="galeria-nav galeria-nav--prev" type="button" aria-label="Foto anterior">&#10094;</button>
-            <img class="galeria-slider-image" src="img/fts/foto1.jpg" alt="Registro do Festival de Violeiros" />
+            <img class="galeria-slider-image" src="/img/fts/foto1.jpeg" alt="Registro do Festival de Violeiros"
+              decoding="async" fetchpriority="high" />
             <button class="galeria-nav galeria-nav--next" type="button" aria-label="Próxima foto">&#10095;</button>
             <div class="galeria-dots" aria-hidden="true"></div>
           </div>
@@ -164,7 +234,7 @@
             </ul>
           </div>
           <figure class="programacao-figura">
-            <img src="img/viola.png" alt="Viola caipira" />
+            <img src="/img/viola.png" alt="Viola caipira" loading="lazy" decoding="async" />
           </figure>
         </div>
       </section>
@@ -174,7 +244,8 @@
           <h3>Área da Festa Vermelhense</h3>
           <p class="mapa-endereco">Praça Professor Silveira - Centro - Vermelho Novo - MG</p>
           <iframe title="Mapa da Área da Festa Vermelhense"
-            src="https://www.google.com/maps/d/embed?mid=1ClarpL86Fwc0zi-B2ZH4l8d_dmEwdMw&ehbc=2E312F">
+            src="https://www.google.com/maps/d/embed?mid=1ClarpL86Fwc0zi-B2ZH4l8d_dmEwdMw&ehbc=2E312F" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
           <div class="mapa-acao">
             <a href="https://maps.app.goo.gl/xUytamGW4LwcrtuW8" target="_blank" rel="noopener noreferrer"
@@ -189,6 +260,9 @@
 
     <section id="inscricao" class="inscricao">
       <div class="card">
+        <figure class="inscricao-ilustracao inscricao-ilustracao--left" aria-hidden="true">
+          <img src="/img/chapeu.png" alt="" loading="lazy" decoding="async" />
+        </figure>
         <h3>Inscrições</h3>
         <p>
           Leia o <a
@@ -197,8 +271,8 @@
         </p>
         <a href="https://forms.gle/6cRyqEUjn4FBJagm8" target="_blank" rel="noopener noreferrer"
           class="cta-button">Inscreva-se agora</a>
-        <figure class="inscricao-ilustracao" aria-hidden="true">
-          <img src="img/lumi.png" alt="" />
+        <figure class="inscricao-ilustracao inscricao-ilustracao--right" aria-hidden="true">
+          <img src="/img/lumi.png" alt="" loading="lazy" decoding="async" />
         </figure>
       </div>
     </section>

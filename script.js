@@ -70,6 +70,8 @@ function initGaleriaSlider(sliderRoot) {
 
   imageEl.loading = "eager";
   imageEl.decoding = "async";
+  imageEl.tabIndex = 0;
+  imageEl.setAttribute("title", "Toque ou clique para abrir em tela cheia");
 
   dotsEl.innerHTML = images
     .map(
@@ -133,6 +135,18 @@ function initGaleriaSlider(sliderRoot) {
     restartAutoplay();
   });
 
+  const openFullscreen = () => {
+    requestFullscreenCompat(sliderRoot);
+  };
+
+  imageEl.addEventListener("click", openFullscreen);
+  imageEl.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openFullscreen();
+    }
+  });
+
   sliderRoot.addEventListener("mouseenter", stopAutoplay);
   sliderRoot.addEventListener("mouseleave", restartAutoplay);
   sliderRoot.addEventListener("focusin", stopAutoplay);
@@ -164,6 +178,17 @@ function initGaleriaSlider(sliderRoot) {
 
   render();
   restartAutoplay();
+}
+
+function requestFullscreenCompat(element) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen().catch(() => {});
+    return;
+  }
+
+  if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  }
 }
 
 function getGaleriaImages(sliderRoot) {

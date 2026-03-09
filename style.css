@@ -35,7 +35,7 @@ button:focus-visible {
 
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -155,6 +155,7 @@ h3 {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.16);
 }
 
 .legado {
@@ -194,9 +195,7 @@ h3 {
   background: transparent;
 }
 
-#sobre,
-#galeria,
-.programacao-local-row > section {
+.programacao-local > section {
   min-height: auto;
 }
 
@@ -260,6 +259,9 @@ h3 {
 }
 
 #galeria {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   color: var(--wood-dark);
   background:
     radial-gradient(
@@ -391,7 +393,7 @@ h3 {
 
 .fundamental-layout,
 #programacao .programacao-content,
-.programacao-local-row {
+.programacao-local {
   display: flex;
 }
 
@@ -405,7 +407,7 @@ h3 {
 .fundamental-figure,
 #programacao .programacao-texto,
 #programacao .programacao-figura,
-.programacao-local-row > section {
+.programacao-local > section {
   flex: 1 1 0;
 }
 
@@ -531,80 +533,59 @@ h3 {
   z-index: 1;
 }
 
+.regulamento-inline-link,
+.regulamento-inline-link:visited,
+.regulamento-inline-link:hover,
+.regulamento-inline-link:active {
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 2px;
+  font-weight: 700;
+}
+
 .galeria-grid {
   display: flex;
   gap: 20px;
 }
 
-.galeria-item {
+.galeria-item1,
+.galeria-item2,
+.galeria-item3,
+.galeria-item4 {
   flex: 1 1 0;
   min-height: 220px;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  -webkit-text-fill-color: #fff;
   background: linear-gradient(145deg, #5f2f1b 0%, #2c170f 100%);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
-.galeria-item--slider {
+.galeria-item1 {
   padding: 0;
   background: transparent;
 }
 
-.galeria-item--instagram {
+.galeria-item2,
+.galeria-item3,
+.galeria-item4 {
   padding: 0;
   align-items: stretch;
-  background: transparent;
 }
 
-.instagram-card {
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  border-radius: 16px;
-  padding: 22px 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 14px;
+.galeria-item2 {
   background: linear-gradient(160deg, #28192d 0%, #4f2343 48%, #8f3a4a 100%);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.instagram-card i {
-  font-size: 1.9rem;
-  color: #fff;
+.galeria-item3 {
+  background: linear-gradient(160deg, #111111 0%, #232323 50%, #383838 100%);
 }
 
-.instagram-card p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.45;
-  text-transform: none;
-}
-
-.instagram-card a {
-  align-self: flex-start;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: linear-gradient(145deg, #f77737 0%, #e1306c 55%, #833ab4 100%);
-  color: #fff;
-  font-size: 0.83rem;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: none;
-}
-
-.instagram-card a:hover {
-  opacity: 0.92;
+.galeria-item4 {
+  background: linear-gradient(160deg, #311313 0%, #651d1d 52%, #9a1f1f 100%);
 }
 
 .galeria-slider {
@@ -622,6 +603,22 @@ h3 {
   height: 100%;
   min-height: 220px;
   object-fit: cover;
+  cursor: zoom-in;
+}
+
+.galeria-slider:fullscreen,
+.galeria-slider:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  min-height: 0;
+  border-radius: 0;
+  background: #000;
+}
+
+.galeria-slider:fullscreen .galeria-slider-image,
+.galeria-slider:-webkit-full-screen .galeria-slider-image {
+  min-height: 0;
+  object-fit: contain;
 }
 
 .galeria-nav {
@@ -670,9 +667,77 @@ h3 {
 }
 
 @media (min-width: 901px) {
+  #galeria {
+    padding-block: 28px;
+  }
+
+  #sobre {
+    padding-block: 28px;
+  }
+
+  #sobre .card {
+    padding: clamp(16px, 2.2vw, 24px);
+  }
+
+  #sobre .fundamental-layout {
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  #sobre .legado p,
+  #sobre .conclusao p,
+  #sobre .importancia li {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  #sobre .importancia li + li {
+    margin-top: 10px;
+  }
+
+  #sobre .fundamental-text .conclusao {
+    margin-top: 16px;
+  }
+
+  #sobre .fundamental-figure.foto-nene {
+    width: min(100%, 200px);
+  }
+
+  #sobre .fundamental-figure.foto-nene img {
+    max-width: 200px;
+  }
+
+  .programacao-local {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    align-items: stretch;
+  }
+
+  .programacao-local > section {
+    min-height: 100%;
+  }
+
   .galeria-grid {
-    padding-inline: 42px;
-    gap: 56px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: 12px;
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .galeria-item1,
+  .galeria-item2,
+  .galeria-item3,
+  .galeria-item4,
+  .galeria-slider {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .galeria-slider-image {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -884,7 +949,7 @@ h3 {
 .social-icons a {
   margin-right: 15px;
   color: #fff;
-  font-size: 20px;
+  font-size: 40px;
   transition:
     transform 0.3s,
     color 0.3s;
@@ -900,20 +965,6 @@ h3 {
   line-height: 1.6;
 }
 
-.contact-info a[href^="tel"] {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff;
-  text-decoration: none;
-}
-
-.contact-info [x-apple-data-detectors],
-.contact-info a[x-apple-data-detectors] {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  text-decoration: none !important;
-  font: inherit !important;
-}
-
 @media (max-width: 900px) {
   .navbar {
     justify-content: flex-end;
@@ -922,13 +973,16 @@ h3 {
   .hero-divisor,
   .fundamental-layout,
   #programacao .programacao-content,
-  .programacao-local-row,
+  .programacao-local,
   .footer,
   .galeria-grid {
     flex-direction: column;
   }
 
   .hero-divisor {
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 72px 12px 8px;
     text-align: center;
   }
 
@@ -936,13 +990,41 @@ h3 {
   .hero-content,
   .hero-right,
   .fundamental-figure.foto-nene,
-  .programacao-local-row > section,
+  .programacao-local > section,
   .footer-left,
   .footer-right {
     width: 100%;
   }
 
-  .programacao-local-row > section {
+  .hero-left,
+  .hero-content,
+  .hero-right {
+    flex: 0 0 auto;
+  }
+
+  .hero-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .hero-main-logo {
+    height: auto;
+    margin-block: -12px -20px;
+  }
+
+  .hero-content h1 {
+    margin: 0.2rem 0;
+    font-size: 0.88em;
+    line-height: 1.2;
+  }
+
+  .hero-content h2 {
+    margin: 0.2rem 0;
+    font-size: 0.66em;
+    line-height: 1.2;
+  }
+
+  .programacao-local > section {
     flex: 0 0 auto;
   }
 

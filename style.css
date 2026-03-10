@@ -867,6 +867,7 @@ h3 {
 
 .inscricao .card {
   position: relative;
+  padding-inline: clamp(180px, 20vw, 240px);
 }
 
 .inscricao .inscricao-ilustracao {
@@ -892,6 +893,13 @@ h3 {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.inscricao .card h3,
+.inscricao .card p,
+.inscricao .card .cta-button {
+  max-width: 44rem;
+  margin-inline: auto;
 }
 
 .inscricao .cta-button {
@@ -1108,6 +1116,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-inline: 0;
   }
 
   .fundamental-figure.foto-nene img {
